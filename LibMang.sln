@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleGameLibraryManager", "SimpleGameLibraryManager.csproj", "{C427BDF1-9FF5-4710-90B0-E4A6C71FF9AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C427BDF1-9FF5-4710-90B0-E4A6C71FF9AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C427BDF1-9FF5-4710-90B0-E4A6C71FF9AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C427BDF1-9FF5-4710-90B0-E4A6C71FF9AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C427BDF1-9FF5-4710-90B0-E4A6C71FF9AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0F9CC7E-4037-4C55-AD14-4177991E54A8}
+	EndGlobalSection
+EndGlobal
