@@ -12,13 +12,14 @@ class MainWindow : Formium
     {
         // 在此处设置窗口样式
         Size = new System.Drawing.Size(1280, 720);
+        EnableSplashScreen = false;
     }
 
     protected override void OnReady()
     {
         // 在此处进行浏览器相关操作
 
-        //ShowDevTools();
+        ShowDevTools();
         //ExecuteJavaScript("alert('Hello NanUI')");
     }
 }
