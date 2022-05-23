@@ -7,16 +7,13 @@ namespace SimpleGameLibraryManager
 {
     public class GameContentService : DataService
     {
-        private int GetGamesCount()
-        {
-            return 114514;
-        }
 
         [RoutePost("GetContents")]
         public ResourceResponse GetIds(ResourceRequest request)
         {
             // 返回json
-            return Json(new { success = true, num = GetGamesCount() });
+            List<int> list = new List<int>(BackGrounds.lib.Keys);
+            return Json(new { success = true, List = list });
         }
 
         [RoutePost("GetDetails")]
@@ -35,7 +32,7 @@ namespace SimpleGameLibraryManager
 
             GameInfo info = new GameInfo(result);
             info.ScanDir();
-            BackGrounds.lib.Add(0, info);
+            BackGrounds.lib.Add(result.GetHashCode(), info);
             return Json(new { success = true });
         }
     }

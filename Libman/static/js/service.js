@@ -10,6 +10,10 @@ function getGameDetails(gid){
 	});
 }
 
+function addGameToLibrary(path){
+	$.post(api_root + "GameContent/AddSingleGame", path);
+}
+
 function removeGameItem(gid, type){
 	if(type ==="recent"){
 		var del = document.getElementById(gid+"_rec");
