@@ -49,7 +49,7 @@
         <div class="container">
             <div class="navbar-header">
                 <div class="navbar-brand"><a class="bold" href="/">
-                    <img class="brand-logo" src="./static/images/gal.png"><span>萌游</span></a></div>
+                    <img class="brand-logo" src="./static/images/gal.png"><span>Test</span></a></div>
                 <button type="button" class="navbar-toggle offcanvas-toggle pull-right" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas" style="float:left;">
                     <span class="sr-only"></span>
                     <span>
@@ -60,52 +60,6 @@
                 </button>
             </div>
             <div class="navbar-offcanvas navbar-offcanvas-touch" id="js-bootstrap-offcanvas">
-                <ul class="nav navbar-nav">
-                    <li class="pop">
-                        <a href="javascript:;" ondblclick="location.href='/games'" class="pop-toggle" data-toggle="pop"><span data-localize>游戏</span> <span class="caret"></span></a>
-                        <div class="pop-menu" role="menu" style="">
-                        <h5 class="pop-menu-title"><i class="fa fa-compass fa-fw mr4"></i><span data-localize>导航</span></h5>
-                        <ul class="list-unstyled">
-                            <li class=""><a href="/games/incoming" data-localize>本月新作</a></li>
-                            <li class=""><a href="/games/popular" data-localize>近期热门</a></li>
-                            <li class=""><a href="/games/upcoming" data-localize>即将发行</a></li>
-                            <li class=""><a href="/games/ranking" data-localize>人气游戏</a></li>
-                            <!--li class=""><a class="grey" nohref="/games/playlist" data-localize>推荐合集</a></li-->
-                            <li class=""><a href="/games/gallery" data-localize>游戏画廊</a></li>
-                        </ul>
-                        <h5 class="pop-menu-title"><i class="fa fa-skyatlas fa-fw mr4"></i><span data-localize>风格</span></h5>
-                        <ul class="list-unstyled">
-                            <li class="active"><a href="/search?query=" date-cate="" data-localize>全部</a></li>
-                            <li class=""><a href="/search?lang=hh&cate=1" date-cate="1" data-localize>纯爱</a></li>
-                            <li class=""><a href="/search?lang=hh&cate=2" date-cate="2" data-localize>乙女</a></li>
-                            <li class=""><a href="/search?lang=hh&cate=3" date-cate="3" data-localize>家庭</a></li>
-                            <li class=""><a href="/search?lang=hh&cate=4" date-cate="4" data-localize>背德</a></li>
-                            <li class=""><a href="/search?lang=hh&cate=5" date-cate="5" data-localize>拔作</a></li>
-                        </ul>
-                        <h5 class="pop-menu-title"><i class="fa fa-gamepad fa-fw mr4"></i><span data-localize>类型</span></h5>
-                        <ul class="list-unstyled">
-                            <li class=""><a href="/search?lang=hh&type=1" date-type="1" data-localize>商业发行</a></li>
-                            <li class=""><a href="/search?lang=hh&type=2" date-type="2" data-localize>同人游戏</a></li>
-                            <li class=""><a href="/search?lang=hh&type=3" date-type="3" data-localize>FanDisc</a></li>
-                        </ul>
-                        <h5 class="pop-menu-title"><i class="fa fa-globe fa-fw mr4"></i><span data-localize>语言</span></h5>
-                        <ul class="list-unstyled">
-                            <li class=""><a href="/search?tag=&lang=zh" date-lang="zh">中文版</a></li>
-                            <li class=""><a href="/search?tag=&lang=ja" date-lang="ja">日本語版</a></li>
-                            <li class=""><a href="/search?tag=&lang=en" date-lang="en" title="English Edition">English Edition</a></li>
-                        </ul>
-                        <h5 class="pop-menu-title"><i class="fa fa-plus-circle fa-fw mr4"></i><span data-localize>分级</span></h5>
-                        <ul class="list-unstyled">
-                            <li class=""><a href="/search?lang=hh&rating=1" title="All Age" data-localize>全年龄(PG)</a></li>
-                            <li class=""><a href="/search?lang=hh&rating=2" title="15+" data-localize>辅导级(15+)</a></li>
-                            <li class=""><a href="/search?lang=hh&rating=3" title="18X" data-localize>限制级(18X)</a></li>
-                        </ul>
-                        </div>
-                    </li>
-                    <li class=""><a href="/exploring" data-localize>发现</a></li>
-                    <li class=""><a href="/forum" data-localize>论坛</a></li>
-                    <!--li class=""><a href="/games/gallery" data-localize>画廊<span class="badge">New</span></a></li-->
-                </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><form class="navbar-form" action="/search" method="get" role="search">
                     <div class="form-group">
@@ -117,8 +71,6 @@
                         </div>
                     </div>
                     </form></li>
-                    <li><a id="login_btn" href="/user/login" data-localize>登录</a></li>
-                    <li><a href="/user/register" data-localize>注册</a></li>
                 </ul>
             </div>
         </div>
@@ -128,240 +80,12 @@
 
 
 <div class="placeholder-height" style="margin: 0 0 20px; position: relative;">
-    <div class="site-header subjects-header" style="min-height: 20px;">
-	  <div id="filter-container">
-        <div class="container">
-        <div class="row">
-            <div class="tags-holder">
-            <div class="tags-container">
-            <span class="tag-title noselect" data-localize>搜索：</span>
-            <span class="tag-more noselect"><i class="fa fa-angle-down fa-fw"></i></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=ADV" data-localize>ADV</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=RPG" data-localize>RPG</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=NVL" data-localize>NVL</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E6%A0%A1%E5%9B%AD" data-localize>校园</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%89%A7%E6%83%85" data-localize>剧情</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E6%90%9E%E7%AC%91" data-localize>搞笑</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%8A%A8%E4%BD%9C" data-localize>动作</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E6%A0%BC%E6%96%97" data-localize>格斗</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E4%BD%93%E8%82%B2" data-localize>体育</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E6%81%B6%E6%90%9E" data-localize>恶搞</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E6%B5%AA%E6%BC%AB" data-localize>浪漫</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E6%81%8B%E7%88%B1" data-localize>恋爱</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E4%B8%89%E8%A7%92%E6%81%8B" data-localize>三角恋</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E7%BA%AF%E7%88%B1%E6%95%85%E4%BA%8B" data-localize>纯爱故事</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E7%A6%81%E6%96%AD%E4%B9%8B%E6%81%8B" data-localize>禁断之恋</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=BL" data-localize>BL</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E7%99%BE%E5%90%88" data-localize>百合</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=NTR" data-localize>NTR</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E4%BA%92%E5%8A%A8" data-localize>互动</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E6%81%90%E6%80%96" data-localize>恐怖</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E9%AD%94%E5%B9%BB" data-localize>魔幻</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E8%B6%85%E8%83%BD%E5%8A%9B" data-localize>超能力</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%A5%87%E5%B9%BB" data-localize>奇幻</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E7%A7%91%E5%B9%BB" data-localize>科幻</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%BC%82%E6%AC%A1%E5%85%83" data-localize>异次元</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%8D%95%E5%A5%B3%E4%B8%BB" data-localize>单女主</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%A4%A9%E7%84%B6%E5%A5%B3%E4%B8%BB" data-localize>天然女主</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%82%B2%E5%A8%87%E5%A5%B3%E4%B8%BB" data-localize>傲娇女主</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E7%97%85%E5%A8%87%E5%A5%B3%E4%B8%BB" data-localize>病娇女主</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%86%B7%E9%AA%84%E5%A5%B3%E4%B8%BB" data-localize>冷骄女主</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E8%90%9D%E8%8E%89%E5%A5%B3%E4%B8%BB" data-localize>萝莉女主</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%B9%BC%E9%A9%AF%E6%9F%93" data-localize>幼驯染</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%A6%B9%E5%A6%B9%E5%A5%B3%E4%B8%BB" data-localize>妹妹女主</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%AD%A6%E7%94%9F%E5%A5%B3%E4%B8%BB" data-localize>学生女主</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%81%B6%E5%83%8F%E5%A5%B3%E4%B8%BB" data-localize>偶像女主</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%85%AC%E4%B8%BB" data-localize>公主</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%A4%A7%E5%B0%8F%E5%A7%90" data-localize>大小姐</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%A5%B3%E4%BB%86" data-localize>女仆</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E6%8A%A4%E5%A3%AB%E5%A5%B3%E4%B8%BB" data-localize>护士女主</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E6%95%99%E5%B8%88%E5%A5%B3%E4%B8%BB" data-localize>教师女主</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%BE%A1%E5%A7%90%E5%A5%B3%E4%B8%BB" data-localize>御姐女主</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E7%86%9F%E5%A5%B3" data-localize>熟女</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E9%AD%94%E6%B3%95%E5%B0%91%E5%A5%B3" data-localize>魔法少女</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E6%96%87%E8%89%BA%E5%B0%91%E5%A5%B3" data-localize>文艺少女</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E8%BE%A3%E5%A6%B9" data-localize>辣妹</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E6%88%98%E5%A3%AB%E5%A5%B3%E4%B8%BB" data-localize>战士女主</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%B7%AB%E5%A5%B3" data-localize>巫女</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%A4%A9%E7%A5%9E%E5%A5%B3%E4%B8%BB" data-localize>天神女主</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E9%AD%85%E9%AD%94%E5%A5%B3%E4%B8%BB" data-localize>魅魔女主</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E9%9D%9E%E4%BA%BA%E5%A5%B3%E4%B8%BB" data-localize>非人女主</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%85%BD%E5%A8%98%E5%A5%B3%E4%B8%BB" data-localize>兽娘女主</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=Cosplay" data-localize>Cosplay</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E7%88%86%E8%A1%A3" data-localize>爆衣</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E7%8E%B0%E5%AE%9E%E4%B8%BB%E4%B9%89" data-localize>现实主义</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%8F%8B%E6%83%85" data-localize>友情</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%80%92%E5%8F%99" data-localize>倒叙</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E7%A5%9E%E7%A7%98" data-localize>神秘</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%A4%B1%E5%BF%86" data-localize>失忆</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%90%B8%E8%A1%80%E9%AC%BC" data-localize>吸血鬼</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E6%80%AA%E7%89%A9" data-localize>怪物</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E8%A1%80%E8%85%A5" data-localize>血腥</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E6%9A%B4%E5%8A%9B" data-localize>暴力</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E6%B5%B7%E7%9B%97" data-localize>海盗</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E9%98%B4%E8%B0%8B" data-localize>阴谋</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E7%8A%AF%E7%BD%AA" data-localize>犯罪</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E7%A7%81%E9%80%9A" data-localize>私通</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%A0%95%E8%90%BD" data-localize>堕落</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E6%8F%B4%E4%BA%A4" data-localize>援交</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E6%80%80%E5%AD%95" data-localize>怀孕</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%82%AC%E7%9C%A0" data-localize>催眠</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=BDSM" data-localize>BDSM</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%A5%B4%E5%BD%B9%E7%9B%91%E7%A6%81" data-localize>奴役监禁</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%8A%A8%E7%89%A9%E6%8B%9F%E4%BA%BA" data-localize>动物拟人</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E7%8C%8E%E5%A5%87" data-localize>猎奇</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E6%80%A7%E5%88%AB%E5%AD%98%E7%96%91" data-localize>性别存疑</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%8F%8C%E6%80%A7" data-localize>双性</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%BC%82%E6%80%A7" data-localize>异性</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E6%80%A7%E8%BD%AC" data-localize>性转</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%A5%B3%E8%A3%85" data-localize>女装</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=3D" data-localize>3D</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E4%B9%99%E5%A5%B3%E6%B8%B8%E6%88%8F" data-localize>乙女游戏</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&tag=%E5%90%8C%E4%BA%BA%E6%B8%B8%E6%88%8F" data-localize>同人游戏</a></span>
-            
-            <hr class="" style="margin: 10px 0; clear: both;">
-            <span class="tag-title noselect" data-localize>平台：</span>
-            <span class="tag">
-                <a href="/search?lang=hh&platform=Windows">Windows</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&platform=Macintosh">Macintosh</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&platform=Linux">Linux</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&platform=Android">Android</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&platform=iOS">iOS</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&platform=PlayStation">PlayStation</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&platform=Nintendo">Nintendo</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&platform=Xbox">Xbox</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&platform=%E4%B8%BB%E6%9C%BA">主机</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&platform=%E6%8E%8C%E6%9C%BA">掌机</a></span>
-            
-            <hr class="" style="margin: 10px 0; clear: both;">
-            <span class="tag-title noselect" data-localize>日期：</span>
-            <span class="tag">
-                <a href="/search?lang=hh&year=2022&month=06">2022年06月</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&year=2022&month=05">2022年05月</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&year=2022&month=04">2022年04月</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&year=2022&month=03">2022年03月</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&year=2022&month=02">2022年02月</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&year=2022&month=01">2022年01月</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&year=2021&month=12">2021年12月</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&year=2021&month=11">2021年11月</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&date=,2021-11-01" data-localize>半年之前</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&year=2020">2020年</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&year=2019">2019年</a></span>
-            <span class="tag">
-                <a href="/search?lang=hh&year=2018">2018年</a></span>
-            
-            </div>
-            </div>
-        </div>
-        </div>
+    <div class="site-header subjects-header" style="min-height: 0px;">
+		
     </div>
-    </div>
-    
 </div>
 
-
-
+	
 <div class="container">
 <!-- Content -->
 
@@ -387,21 +111,15 @@
         <div class="media-body rel">
             <div class="media-heading mb5">
                 <h4 class="text-line text-line-2" title="Futamata Ren'ai">
-                    <a class="dark ts-white " href="/games/entry/8657">フタマタ恋愛</a></h4>
+                    <a class="dark ts-white " href="/games/entry/8657">abc</a></h4>
+                <h4>&nbsp;</h4>
             </div>
-            <span class="text-xs grey">2022-04-28</span>
-            <p class="text-line text-line-4 mt5">
-            <span>品牌：<font color="grey">ASa Project</font></span><br>
-            <span>编剧：<font color="grey">八日なのか</font></span><br>
-            <span>原画：<font color="grey">冬壱もんめ，結城リカ，夕凪セシナ</font></span><br>
-            <span>声优：<font color="grey">夏峰いろは，春乃いろは，東雲りあ，森谷こころ，鏑木真，七種結花，御苑生メイ，花寺香蓮，飴川紫乃，鳴瀬なごみ，来馬里於</font></span>
+            <p class="text-line text-line-5 mt5">
+			<span>发行时间：<font color="grey"></font></span><br>
+            <span>类型：<font color="grey"></font></span><br>
+            <span>上次启动：<font color="grey"></font></span><br>
+            <span>游戏时长：<font color="grey"></font></span>
             </p>
-            <div class="abs-bottom flex-s1 ts-white">
-                <span class="grey"><i class="fa fa-fw fa-heart"></i> 7</span>
-                <span class="grey"><i class="fa fa-fw fa-eye"></i> 1108</span>
-                <span class="grey"><i class="fa fa-fw fa-comment"></i> 2</span>
-                <span class="grey hidden-xs"></span>
-            </div>
         </div>
     </section>
 </div>
@@ -419,20 +137,14 @@
             <div class="media-heading mb5">
                 <h4 class="text-line text-line-2" title="Lymph ni ATATA! ~Mesu Gaki Milk Dopyurasshu~">
                     <a class="dark ts-white " href="/games/entry/8687">リンパにATATA！ ～メス牡蠣ミルクどぴゅらっしゅ～</a></h4>
+                <h4>&nbsp;</h4>
             </div>
-            <span class="text-xs grey">2022-03-25</span>
-            <p class="text-line text-line-4 mt5">
-            <span>品牌：<font color="grey">Hending</font></span><br>
-            <span>编剧：<font color="grey">九鬼月兎</font></span><br>
-            <span>原画：<font color="grey">こくと</font></span><br>
-            <span>声优：<font color="grey">そよかぜみらい，星鹿りえ</font></span>
+            <p class="text-line text-line-5 mt5">
+			<span>发行时间：<font color="grey"></font></span><br>
+            <span>类型：<font color="grey"></font></span><br>
+            <span>上次启动：<font color="grey"></font></span><br>
+            <span>游戏时长：<font color="grey"></font></span>
             </p>
-            <div class="abs-bottom flex-s1 ts-white">
-                <span class="grey"><i class="fa fa-fw fa-heart"></i> 45</span>
-                <span class="grey"><i class="fa fa-fw fa-eye"></i> 2739</span>
-                <span class="grey"><i class="fa fa-fw fa-comment"></i> 0</span>
-                <span class="grey hidden-xs"></span>
-            </div>
         </div>
     </section>
 </div>
@@ -450,20 +162,14 @@
             <div class="media-heading mb5">
                 <h4 class="text-line text-line-2" title="Ayakashi Kyoushuutan">
                     <a class="dark ts-white m-green" href="/games/entry/8018">あやかし郷愁譚</a></h4>
+                <h4>&nbsp;</h4>
             </div>
-            <span class="text-xs grey">2022-03-11</span>
-            <p class="text-line text-line-4 mt5">
-            <span>品牌：<font color="grey">Hikari Field</font></span><br>
-            <span>编剧：<font color="grey">進行豹</font></span><br>
-            <span>原画：<font color="grey">Cura</font></span><br>
-            <span>声优：<font color="grey">ヒマリ，あじ秋刀魚，杏子御津，上原あおい，佐倉江美</font></span>
+            <p class="text-line text-line-5 mt5">
+			<span>发行时间：<font color="grey"></font></span><br>
+            <span>类型：<font color="grey"></font></span><br>
+            <span>上次启动：<font color="grey"></font></span><br>
+            <span>游戏时长：<font color="grey"></font></span>
             </p>
-            <div class="abs-bottom flex-s1 ts-white">
-                <span class="grey"><i class="fa fa-fw fa-heart"></i> 0</span>
-                <span class="grey"><i class="fa fa-fw fa-eye"></i> 550</span>
-                <span class="grey"><i class="fa fa-fw fa-comment"></i> 0</span>
-                <span class="grey hidden-xs"></span>
-            </div>
         </div>
     </section>
 </div>
@@ -481,20 +187,14 @@
             <div class="media-heading mb5">
                 <h4 class="text-line text-line-2" title="Kami no Kuni no Mahoutsukai">
                     <a class="dark ts-white m-green" href="/games/entry/8499">神の国の魔法使い</a></h4>
+                <h4>&nbsp;</h4>
             </div>
-            <span class="text-xs grey">2022-01-28</span>
-            <p class="text-line text-line-4 mt5">
-            <span>品牌：<font color="grey">NekoNeko Soft</font></span><br>
-            <span>编剧：<font color="grey">片岡とも</font></span><br>
-            <span>原画：<font color="grey">秋乃武彦</font></span><br>
-            <span>声优：<font color="grey">中村圭佑，能登麻美子，可可味，後藤邑子，やなせなつみ，日野聡，柳知萧</font></span>
+            <p class="text-line text-line-5 mt5">
+			<span>发行时间：<font color="grey"></font></span><br>
+            <span>类型：<font color="grey"></font></span><br>
+            <span>上次启动：<font color="grey"></font></span><br>
+            <span>游戏时长：<font color="grey"></font></span>
             </p>
-            <div class="abs-bottom flex-s1 ts-white">
-                <span class="grey"><i class="fa fa-fw fa-heart"></i> 7</span>
-                <span class="grey"><i class="fa fa-fw fa-eye"></i> 867</span>
-                <span class="grey"><i class="fa fa-fw fa-comment"></i> 0</span>
-                <span class="grey hidden-xs"></span>
-            </div>
         </div>
     </section>
 </div>
@@ -512,20 +212,14 @@
             <div class="media-heading mb5">
                 <h4 class="text-line text-line-2" title="Sousaku Kanojo no Ren'ai Koushiki">
                     <a class="dark ts-white " href="/games/entry/8442">創作彼女の恋愛公式</a></h4>
+                <h4>&nbsp;</h4>
             </div>
-            <span class="text-xs grey">2021-11-26</span>
-            <p class="text-line text-line-4 mt5">
-            <span>品牌：<font color="grey">Aino+Links</font></span><br>
-            <span>编剧：<font color="grey">工藤啓介</font></span><br>
-            <span>原画：<font color="grey">有葉，九条だんぼ，永山ゆうのん，ロギー，志水マサトシ，TwinBox，mijyowaki</font></span><br>
-            <span>声优：<font color="grey">明羽杏子，くすはらゆい，夏峰いろは，葉月ひかり，秋野花，恋羽もこ，遠野そよぎ，烏丸そら，四葉ヨウ，小鳥居夕花，蒼乃むすび</font></span>
+            <p class="text-line text-line-5 mt5">
+			<span>发行时间：<font color="grey"></font></span><br>
+            <span>类型：<font color="grey"></font></span><br>
+            <span>上次启动：<font color="grey"></font></span><br>
+            <span>游戏时长：<font color="grey"></font></span>
             </p>
-            <div class="abs-bottom flex-s1 ts-white">
-                <span class="grey"><i class="fa fa-fw fa-heart"></i> 29</span>
-                <span class="grey"><i class="fa fa-fw fa-eye"></i> 2840</span>
-                <span class="grey"><i class="fa fa-fw fa-comment"></i> 3</span>
-                <span class="grey hidden-xs"></span>
-            </div>
         </div>
     </section>
 </div>
@@ -543,20 +237,14 @@
             <div class="media-heading mb5">
                 <h4 class="text-line text-line-2" title="Omoide Kakaete Ai ni Koi!!">
                     <a class="dark ts-white " href="/games/entry/8411">思い出抱えてアイにコイ!!</a></h4>
+                <h4>&nbsp;</h4>
             </div>
-            <span class="text-xs grey">2021-09-24</span>
-            <p class="text-line text-line-4 mt5">
-            <span>品牌：<font color="grey">Hooksoft</font></span><br>
-            <span>编剧：<font color="grey">モーリー</font></span><br>
-            <span>原画：<font color="grey">アトリエ空機関，株式会社クリープ，のいと，RINKS</font></span><br>
-            <span>声优：<font color="grey">七種結花，実羽ゆうき，花澤さくら，七瀬こより，和央きりか，平野響子，東シヅ，綾音まこ，梅小路ピンポン，神無月ほのか，咲久間匠，衣央里全</font></span>
+            <p class="text-line text-line-5 mt5">
+			<span>发行时间：<font color="grey"></font></span><br>
+            <span>类型：<font color="grey"></font></span><br>
+            <span>上次启动：<font color="grey"></font></span><br>
+            <span>游戏时长：<font color="grey"></font></span>
             </p>
-            <div class="abs-bottom flex-s1 ts-white">
-                <span class="grey"><i class="fa fa-fw fa-heart"></i> 27</span>
-                <span class="grey"><i class="fa fa-fw fa-eye"></i> 2752</span>
-                <span class="grey"><i class="fa fa-fw fa-comment"></i> 0</span>
-                <span class="grey hidden-xs"></span>
-            </div>
         </div>
     </section>
 </div>
@@ -574,20 +262,14 @@
             <div class="media-heading mb5">
                 <h4 class="text-line text-line-2" title="Ore no Cupid ga Ponkotsu Sugite Kowa~i.">
                     <a class="dark ts-white " href="/games/entry/8398">俺の恋天使がポンコツすぎてコワ～い。</a></h4>
+                <h4>&nbsp;</h4>
             </div>
-            <span class="text-xs grey">2021-09-24</span>
-            <p class="text-line text-line-4 mt5">
-            <span>品牌：<font color="grey">Hulotte</font></span><br>
-            <span>编剧：<font color="grey">蒼井かしい</font></span><br>
-            <span>原画：<font color="grey">池上茜，ニライカナイスタジオ</font></span><br>
-            <span>声优：<font color="grey">北大路ゆき，はちみつこ，猫村ゆき，月野きいろ，くすはらゆい，歩サラ，明羽杏子，結城旭，積木るぅむ</font></span>
+            <p class="text-line text-line-5 mt5">
+			<span>发行时间：<font color="grey"></font></span><br>
+            <span>类型：<font color="grey"></font></span><br>
+            <span>上次启动：<font color="grey"></font></span><br>
+            <span>游戏时长：<font color="grey"></font></span>
             </p>
-            <div class="abs-bottom flex-s1 ts-white">
-                <span class="grey"><i class="fa fa-fw fa-heart"></i> 29</span>
-                <span class="grey"><i class="fa fa-fw fa-eye"></i> 2359</span>
-                <span class="grey"><i class="fa fa-fw fa-comment"></i> 0</span>
-                <span class="grey hidden-xs"></span>
-            </div>
         </div>
     </section>
 </div>
@@ -605,20 +287,14 @@
             <div class="media-heading mb5">
                 <h4 class="text-line text-line-2" title="SINce Memories: Hoshi no Sora no Shita de">
                     <a class="dark ts-white m-green" href="/games/entry/8395">シンスメモリーズ 星天の下で</a></h4>
+                <h4>&nbsp;</h4>
             </div>
-            <span class="text-xs grey">2021-09-16</span>
-            <p class="text-line text-line-4 mt5">
-            <span>品牌：<font color="grey">MAGES. GAME</font></span><br>
-            <span>编剧：<font color="grey">秋月ひろ</font></span><br>
-            <span>原画：<font color="grey">U35</font></span><br>
-            <span>声优：<font color="grey">菊地燎，近藤玲奈，渡辺千絢，永木さくら，岡本美歌，田所あずさ，木野日菜，間島淳司，夏吉ゆうこ，渋谷彩乃</font></span>
+            <p class="text-line text-line-5 mt5">
+			<span>发行时间：<font color="grey"></font></span><br>
+            <span>类型：<font color="grey"></font></span><br>
+            <span>上次启动：<font color="grey"></font></span><br>
+            <span>游戏时长：<font color="grey"></font></span>
             </p>
-            <div class="abs-bottom flex-s1 ts-white">
-                <span class="grey"><i class="fa fa-fw fa-heart"></i> 16</span>
-                <span class="grey"><i class="fa fa-fw fa-eye"></i> 1630</span>
-                <span class="grey"><i class="fa fa-fw fa-comment"></i> 1</span>
-                <span class="grey hidden-xs"></span>
-            </div>
         </div>
     </section>
 </div>
@@ -636,20 +312,14 @@
             <div class="media-heading mb5">
                 <h4 class="text-line text-line-2" title="Yuukyuu no Campanella">
                     <a class="dark ts-white " href="/games/entry/8345">悠久のカンパネラ</a></h4>
+                <h4>&nbsp;</h4>
             </div>
-            <span class="text-xs grey">2021-07-30</span>
-            <p class="text-line text-line-4 mt5">
-            <span>品牌：<font color="grey">Windmill Oasis</font></span><br>
-            <span>编剧：<font color="grey">中島大河</font></span><br>
-            <span>原画：<font color="grey">茜屋，こ～ちゃ</font></span><br>
-            <span>声优：<font color="grey">藤咲ウサ，風音，北見六花，歩サラ，春山琴巳，遥そら，御子神猫，杏子御津，みる</font></span>
+            <p class="text-line text-line-5 mt5">
+			<span>发行时间：<font color="grey"></font></span><br>
+            <span>类型：<font color="grey"></font></span><br>
+            <span>上次启动：<font color="grey"></font></span><br>
+            <span>游戏时长：<font color="grey"></font></span>
             </p>
-            <div class="abs-bottom flex-s1 ts-white">
-                <span class="grey"><i class="fa fa-fw fa-heart"></i> 33</span>
-                <span class="grey"><i class="fa fa-fw fa-eye"></i> 2707</span>
-                <span class="grey"><i class="fa fa-fw fa-comment"></i> 0</span>
-                <span class="grey hidden-xs"></span>
-            </div>
         </div>
     </section>
 </div>
@@ -667,20 +337,14 @@
             <div class="media-heading mb5">
                 <h4 class="text-line text-line-2" title="HajiLove -Making * Lovers-">
                     <a class="dark ts-white " href="/games/entry/8329">ハジラブ -Making*Lovers-</a></h4>
+                <h4>&nbsp;</h4>
             </div>
-            <span class="text-xs grey">2021-06-25</span>
-            <p class="text-line text-line-4 mt5">
-            <span>品牌：<font color="grey">Smee</font></span><br>
-            <span>编剧：<font color="grey">ギハラ</font></span><br>
-            <span>原画：<font color="grey">アトリエ空機関，K子，まんごープリン</font></span><br>
-            <span>声优：<font color="grey">白雪碧，月野きいろ，鹿瀬紫卯，白月かなめ</font></span>
+            <p class="text-line text-line-5 mt5">
+			<span>发行时间：<font color="grey"></font></span><br>
+            <span>类型：<font color="grey"></font></span><br>
+            <span>上次启动：<font color="grey"></font></span><br>
+            <span>游戏时长：<font color="grey"></font></span>
             </p>
-            <div class="abs-bottom flex-s1 ts-white">
-                <span class="grey"><i class="fa fa-fw fa-heart"></i> 39</span>
-                <span class="grey"><i class="fa fa-fw fa-eye"></i> 3484</span>
-                <span class="grey"><i class="fa fa-fw fa-comment"></i> 0</span>
-                <span class="grey hidden-xs"></span>
-            </div>
         </div>
     </section>
 </div>
@@ -698,20 +362,14 @@
             <div class="media-heading mb5">
                 <h4 class="text-line text-line-2" title="Madohi Shiroki no Kamikakushi">
                     <a class="dark ts-white " href="/games/entry/8276">まどひ白きの神隠し</a></h4>
+                <h4>&nbsp;</h4>
             </div>
-            <span class="text-xs grey">2021-05-28</span>
-            <p class="text-line text-line-4 mt5">
-            <span>品牌：<font color="grey">Lump of Sugar</font></span><br>
-            <span>编剧：<font color="grey">御厨みくり</font></span><br>
-            <span>原画：<font color="grey">奏ナコト，萌木原ふみたけ，流かさね</font></span><br>
-            <span>声优：<font color="grey">歩サラ，春乃いろは，風花ましろ，実羽ゆうき，なかせひな，一条和矢，花宮楓</font></span>
+            <p class="text-line text-line-5 mt5">
+			<span>发行时间：<font color="grey"></font></span><br>
+            <span>类型：<font color="grey"></font></span><br>
+            <span>上次启动：<font color="grey"></font></span><br>
+            <span>游戏时长：<font color="grey"></font></span>
             </p>
-            <div class="abs-bottom flex-s1 ts-white">
-                <span class="grey"><i class="fa fa-fw fa-heart"></i> 24</span>
-                <span class="grey"><i class="fa fa-fw fa-eye"></i> 2041</span>
-                <span class="grey"><i class="fa fa-fw fa-comment"></i> 0</span>
-                <span class="grey hidden-xs"></span>
-            </div>
         </div>
     </section>
 </div>
@@ -729,20 +387,14 @@
             <div class="media-heading mb5">
                 <h4 class="text-line text-line-2" title="Happy Live, Show Up!">
                     <a class="dark ts-white " href="/games/entry/8156">ハッピーライヴ ショウアップ！</a></h4>
+                <h4>&nbsp;</h4>
             </div>
-            <span class="text-xs grey">2021-05-28</span>
-            <p class="text-line text-line-4 mt5">
-            <span>品牌：<font color="grey">Favorite</font></span><br>
-            <span>编剧：<font color="grey">高山大河</font></span><br>
-            <span>原画：<font color="grey">ベコ太郎，ヒラサト，ミズタマ，司田カズヒロ，わいっしゅ</font></span><br>
-            <span>声优：<font color="grey">夏和小，森崎乃々華，澤田なつ，井伊香織，八ッ橋しなもん，米倉沙弥，プリン慎二，相葉茉美，石川乃奈</font></span>
+            <p class="text-line text-line-5 mt5">
+			<span>发行时间：<font color="grey"></font></span><br>
+            <span>类型：<font color="grey"></font></span><br>
+            <span>上次启动：<font color="grey"></font></span><br>
+            <span>游戏时长：<font color="grey"></font></span>
             </p>
-            <div class="abs-bottom flex-s1 ts-white">
-                <span class="grey"><i class="fa fa-fw fa-heart"></i> 17</span>
-                <span class="grey"><i class="fa fa-fw fa-eye"></i> 1735</span>
-                <span class="grey"><i class="fa fa-fw fa-comment"></i> 0</span>
-                <span class="grey hidden-xs"></span>
-            </div>
         </div>
     </section>
 </div>
@@ -760,20 +412,14 @@
             <div class="media-heading mb5">
                 <h4 class="text-line text-line-2" title="Angelique Luminarise">
                     <a class="dark ts-white m-green" href="/games/entry/8159">アンジェリーク ルミナライズ</a></h4>
+                <h4>&nbsp;</h4>
             </div>
-            <span class="text-xs grey">2021-05-20</span>
-            <p class="text-line text-line-4 mt5">
-            <span>品牌：<font color="grey">Koei Tecmo</font></span><br>
-            <span>编剧：<font color="grey">雨宮うた</font></span><br>
-            <span>原画：<font color="grey">紗与イチ</font></span><br>
-            <span>声优：<font color="grey">上村祐翔，大塚剛央，竹内良太，小松昌平，七海ひろき，佐藤拓也，宮崎遊，島﨑信長，土屋神葉，小野友樹，白石涼子，今井文也</font></span>
+            <p class="text-line text-line-5 mt5">
+			<span>发行时间：<font color="grey"></font></span><br>
+            <span>类型：<font color="grey"></font></span><br>
+            <span>上次启动：<font color="grey"></font></span><br>
+            <span>游戏时长：<font color="grey"></font></span>
             </p>
-            <div class="abs-bottom flex-s1 ts-white">
-                <span class="grey"><i class="fa fa-fw fa-heart"></i> 5</span>
-                <span class="grey"><i class="fa fa-fw fa-eye"></i> 617</span>
-                <span class="grey"><i class="fa fa-fw fa-comment"></i> 0</span>
-                <span class="grey hidden-xs"></span>
-            </div>
         </div>
     </section>
 </div>
@@ -791,20 +437,14 @@
             <div class="media-heading mb5">
                 <h4 class="text-line text-line-2" title="Waga Himegimi ni Eikan o">
                     <a class="dark ts-white " href="/games/entry/8066">我が姫君に栄冠を</a></h4>
+                <h4>&nbsp;</h4>
             </div>
-            <span class="text-xs grey">2021-03-26</span>
-            <p class="text-line text-line-4 mt5">
-            <span>品牌：<font color="grey">Minato Soft</font></span><br>
-            <span>编剧：<font color="grey">タカヒロ</font></span><br>
-            <span>原画：<font color="grey">みこしまつり，wagi</font></span><br>
-            <span>声优：<font color="grey">明羽杏子，三咲里奈，夏和小，九条信乃，ししゃも，黒瀬鷹，井伊筋肉，ほうでん亭センマイ，畑山大雪山，ほうでん亭ガツ，小鳥居夕花，夏空ひまわり，神谷たたみ，かわしまりの，AIRI，三岳洋二，花頭泫，紀之，青島刃，仲達，柊香礼，蒼井ゆず，四季路，七瀬こより，風間瞬，杏子御津，富士爆発，海原エレナ，花丸あすな，平井達矢，マス・鴉，北都南，桃井いちご，白賀野慈居，左高蹴，手塚りょうこ，猪森天真，風音，九条ゆめ，神代岬，猫村ゆき，桃山いおん，佐藤涼樹，由嘉鈍，遥そら，青山ゆかり，ほうでん亭ノドガシラ，千葉繁</font></span>
+            <p class="text-line text-line-5 mt5">
+			<span>发行时间：<font color="grey"></font></span><br>
+            <span>类型：<font color="grey"></font></span><br>
+            <span>上次启动：<font color="grey"></font></span><br>
+            <span>游戏时长：<font color="grey"></font></span>
             </p>
-            <div class="abs-bottom flex-s1 ts-white">
-                <span class="grey"><i class="fa fa-fw fa-heart"></i> 36</span>
-                <span class="grey"><i class="fa fa-fw fa-eye"></i> 3756</span>
-                <span class="grey"><i class="fa fa-fw fa-comment"></i> 1</span>
-                <span class="grey hidden-xs"></span>
-            </div>
         </div>
     </section>
 </div>
@@ -822,20 +462,14 @@
             <div class="media-heading mb5">
                 <h4 class="text-line text-line-2" title="Memories Off -Innocent Fille- Extra Scenario DLC ~Noel Fullbloom~">
                     <a class="dark ts-white " href="/games/entry/8431">メモリーズオフ -Innocent Fille- エクストラシナリオDLC ～ノエル Fullbloom～</a></h4>
+                <h4>&nbsp;</h4>
             </div>
-            <span class="text-xs grey">2021-03-25</span>
-            <p class="text-line text-line-4 mt5">
-            <span>品牌：<font color="grey">KID</font></span><br>
-            <span>编剧：<font color="grey"></font></span><br>
-            <span>原画：<font color="grey"></font></span><br>
-            <span>声优：<font color="grey">千本木彩花，吉田仁美，徳井青空</font></span>
+            <p class="text-line text-line-5 mt5">
+			<span>发行时间：<font color="grey"></font></span><br>
+            <span>类型：<font color="grey"></font></span><br>
+            <span>上次启动：<font color="grey"></font></span><br>
+            <span>游戏时长：<font color="grey"></font></span>
             </p>
-            <div class="abs-bottom flex-s1 ts-white">
-                <span class="grey"><i class="fa fa-fw fa-heart"></i> 0</span>
-                <span class="grey"><i class="fa fa-fw fa-eye"></i> 562</span>
-                <span class="grey"><i class="fa fa-fw fa-comment"></i> 0</span>
-                <span class="grey hidden-xs"></span>
-            </div>
         </div>
     </section>
 </div>
@@ -853,20 +487,14 @@
             <div class="media-heading mb5">
                 <h4 class="text-line text-line-2" title="Juli Nan Zhu Zisha Hai Sheng Qitian">
                     <a class="dark ts-white m-green" href="/games/entry/8311">距离男主自杀还剩七天</a></h4>
+                <h4>&nbsp;</h4>
             </div>
-            <span class="text-xs grey">2021-02-12</span>
-            <p class="text-line text-line-4 mt5">
-            <span>品牌：<font color="grey">Zhiyi</font></span><br>
-            <span>编剧：<font color="grey">めそ</font></span><br>
-            <span>原画：<font color="grey">白浜灯</font></span><br>
-            <span>声优：<font color="grey"></font></span>
+            <p class="text-line text-line-5 mt5">
+			<span>发行时间：<font color="grey"></font></span><br>
+            <span>类型：<font color="grey"></font></span><br>
+            <span>上次启动：<font color="grey"></font></span><br>
+            <span>游戏时长：<font color="grey"></font></span>
             </p>
-            <div class="abs-bottom flex-s1 ts-white">
-                <span class="grey"><i class="fa fa-fw fa-heart"></i> 1</span>
-                <span class="grey"><i class="fa fa-fw fa-eye"></i> 509</span>
-                <span class="grey"><i class="fa fa-fw fa-comment"></i> 0</span>
-                <span class="grey hidden-xs"></span>
-            </div>
         </div>
     </section>
 </div>
@@ -884,20 +512,14 @@
             <div class="media-heading mb5">
                 <h4 class="text-line text-line-2" title="Re:Zero kara Hajimeru Isekai Seikatsu - Itsuwari no Ousen Kouho">
                     <a class="dark ts-white m-green" href="/games/entry/8025">Re:ゼロから始める異世界生活 偽りの王選候補</a></h4>
+                <h4>&nbsp;</h4>
             </div>
-            <span class="text-xs grey">2021-01-28</span>
-            <p class="text-line text-line-4 mt5">
-            <span>品牌：<font color="grey">Chime Corporation</font></span><br>
-            <span>编剧：<font color="grey">石井武夫</font></span><br>
-            <span>原画：<font color="grey">大塚真一郎</font></span><br>
-            <span>声优：<font color="grey">小林裕介，CassandraLeeMorris，新井里美，ErikaHarlacher，KayliMills，赤﨑千夏，雨宮天，FayeMata，BriannaKnickerbocker，平野綾，AleksLe，KeithSilverstein，ArniePantoja，堀江由衣，ChrisTergliafera，潘めぐみ，AlejandroSaab，三宅健太，EricaMendez，松岡禎丞，本渡楓，LucienDodge，村川梨衣，中村悠一，ImariWilliams，子安武人，KaijiTang，JulieAnnTaylor，麦人，BrockFosterPowell，高橋広樹</font></span>
+            <p class="text-line text-line-5 mt5">
+			<span>发行时间：<font color="grey"></font></span><br>
+            <span>类型：<font color="grey"></font></span><br>
+            <span>上次启动：<font color="grey"></font></span><br>
+            <span>游戏时长：<font color="grey"></font></span>
             </p>
-            <div class="abs-bottom flex-s1 ts-white">
-                <span class="grey"><i class="fa fa-fw fa-heart"></i> 3</span>
-                <span class="grey"><i class="fa fa-fw fa-eye"></i> 1356</span>
-                <span class="grey"><i class="fa fa-fw fa-comment"></i> 1</span>
-                <span class="grey hidden-xs"></span>
-            </div>
         </div>
     </section>
 </div>
@@ -915,20 +537,14 @@
             <div class="media-heading mb5">
                 <h4 class="text-line text-line-2" title="Hoshizora Tetsudou to Shiro no Tabi">
                     <a class="dark ts-white m-green" href="/games/entry/8070">星空鉄道とシロの旅</a></h4>
+                <h4>&nbsp;</h4>
             </div>
-            <span class="text-xs grey">2020-12-30</span>
-            <p class="text-line text-line-4 mt5">
-            <span>品牌：<font color="grey">Shiratamaco</font></span><br>
-            <span>编剧：<font color="grey">さかき傘</font></span><br>
-            <span>原画：<font color="grey">ミニョン，しらたま，わいっしゅ</font></span><br>
-            <span>声优：<font color="grey">星谷美緒，芹澤優，大野柚布子，大森日雅，小原莉子，河西健吾</font></span>
+            <p class="text-line text-line-5 mt5">
+			<span>发行时间：<font color="grey"></font></span><br>
+            <span>类型：<font color="grey"></font></span><br>
+            <span>上次启动：<font color="grey"></font></span><br>
+            <span>游戏时长：<font color="grey"></font></span>
             </p>
-            <div class="abs-bottom flex-s1 ts-white">
-                <span class="grey"><i class="fa fa-fw fa-heart"></i> 38</span>
-                <span class="grey"><i class="fa fa-fw fa-eye"></i> 2227</span>
-                <span class="grey"><i class="fa fa-fw fa-comment"></i> 5</span>
-                <span class="grey hidden-xs"></span>
-            </div>
         </div>
     </section>
 </div>   
@@ -940,36 +556,6 @@
     <div class="box tac mb20">
         <nav class="">
         
-<ul class="pagination">
-    <li class="disabled">
-    <a nohref="/search?lang=hh&page=0" aria-label="Previous"><i class="fa fa-angle-left"></i>
-        <span aria-hidden="true">上一页</span>
-    </a>
-    </li>
-        <li class="active">
-        <a href="/search?lang=hh&page=1">1</a></li>
-    <li class="hidden-xs">
-        <a href="/search?lang=hh&page=2">2</a></li>
-    <li class="hidden-xs">
-        <a href="/search?lang=hh&page=3">3</a></li>
-    <li class="hidden-xs">
-        <a href="/search?lang=hh&page=4">4</a></li>
-    <li class="hidden-xs">
-        <a href="/search?lang=hh&page=5">5</a></li>
-    <li class="hidden-xs">
-        <a href="/search?lang=hh&page=6">6</a></li>
-    <li class="hidden-xs">
-        <a href="/search?lang=hh&page=7">7</a></li>
-    <li class="hidden-xs">
-        <a href="/search?lang=hh&page=8">8</a></li>
-    <li class="">
-    <a href="/search?lang=hh&page=2" aria-label="Next"><span aria-hidden="true">下一页</span>
-        <i class="fa fa-angle-right"></i>
-    </a>
-    </li>
-    <li class=""><a href="/search?lang=hh&page=57" title="最末页"><i class="fa fa-angle-double-right"></i></a></li>
-</ul>
-
         </nav>
     </div>
     </div>
