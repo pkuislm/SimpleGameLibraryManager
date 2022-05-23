@@ -1,6 +1,7 @@
 ﻿using NetDimension.NanUI.Resource.Data;
 using NetDimension.NanUI.Browser.ResourceHandler;
 using System.Diagnostics;
+using System.Collections.Generic;
 
 namespace SimpleGameLibraryManager
 {
@@ -10,11 +11,6 @@ namespace SimpleGameLibraryManager
         {
             return 114514;
         }
-        public class GID
-        {
-            public int GameID { get; set; }
-        }
-
 
         [RoutePost("GetContents")]
         public ResourceResponse GetIds(ResourceRequest request)
@@ -27,7 +23,19 @@ namespace SimpleGameLibraryManager
         public ResourceResponse GetGameDetails(ResourceRequest request)
         {
             var result = request.StringContent;
+
             Debug.WriteLine(result);
+            return Json(new { success = true });
+        }
+
+        [RoutePost("AddSingleGame")]
+        public ResourceResponse Add(ResourceRequest request)
+        {
+            var result = request.StringContent;
+
+            GameInfo info = new GameInfo(result);
+            info.ScanDir();
+            BackGrounds.lib.Add(0, info);
             return Json(new { success = true });
         }
     }
