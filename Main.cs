@@ -23,7 +23,9 @@ class Program
 #if RELEASE
             app.UseLocalFileResource("https", "static.app.local", System.IO.Path.Combine(System.Windows.Forms.Application.StartupPath, "Libman"));
 #else
-            app.UseLocalFileResource("https", "static.app.local", @"E:\Visual Studio Project\BigWorks\SimpleGameLibraryManager\Libman");
+            //app.UseLocalFileResource("https", "static.app.local", @"E:\Visual Studio Project\BigWorks\SimpleGameLibraryManager\Libman");
+            app.UseLocalFileResource("https", "static.app.local", @"C:\Users\ASUS\source\repos\LibMang\Libman");
+        
 #endif
 
             // Register DataServiceResource handler which can process http request and return data to response. It will find all DataServices in current assembly automatically or you can indicate where to find the DataServices by using the third parameter.

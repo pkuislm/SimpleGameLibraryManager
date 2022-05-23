@@ -1534,7 +1534,7 @@ a.bs-link:hover {
     color: #fff;
     text-shadow: 0 1px 1px rgba(0,0,0,.5);
     margin-bottom: 0;
-    padding-top: 80px;
+    padding-top: 20px;
     padding-bottom: 30px;
 }
 @media (max-width: 767px) {
@@ -3314,6 +3314,10 @@ ul.taglist {
 .text-line-5 {
     -webkit-line-clamp: 5;
     max-height: 125px;
+}
+.text-line-6 {
+    -webkit-line-clamp: 6;
+    max-height: 150px;
 }
 
 .lazy-load, .lazy-loaded {
