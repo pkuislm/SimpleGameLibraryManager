@@ -54,30 +54,9 @@ function removeGameItem(gid, type){
 }
 
 function selectPath(){
-	var inputObj=document.createElement('input')
-	inputObj.setAttribute('id','file');
-	inputObj.setAttribute('type','file');
-	inputObj.setAttribute('name','file');
-	inputObj.setAttribute("style",'visibility:hidden');
-	document.body.appendChild(inputObj);
-	inputObj.value;
-	inputObj.click();
-	console.log(inputObj);
+	var a = Formium.external.natives.SelectGamePath();
+	addGameToLibrary(a);
 }
-
-$("#addG").on('click',function(){
-	selectPath();
-	document.querySelector('#file').addEventListener('change', e => {
-		if ('files' in e)
-			var file = e.files[0];
-		else
-			var file = e.value;
-		console.log(e);
-	});
-});
- $("#fileImport").on('click',function(){
-	//文件上传事件
-});
 
 function addGameItem(gid, game, type){
 	//console.log(game);

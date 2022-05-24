@@ -1,8 +1,10 @@
 ﻿using NetDimension.NanUI;
 using SimpleGameLibraryManager;
+using System;
 
 class Program
 {
+    [STAThread]
     static void Main()
     {
         // ...
@@ -24,8 +26,8 @@ class Program
 #if RELEASE
             app.UseLocalFileResource("https", "static.app.local", System.IO.Path.Combine(System.Windows.Forms.Application.StartupPath, "Libman"));
 #else
-            //app.UseLocalFileResource("https", "static.app.local", @"C:\Users\ASUS\source\repos\LibMang\Libman");
-            app.UseLocalFileResource("https", "static.app.local", @"E:\Project\Work\SimpleGameLibraryManager\Libman");
+            app.UseLocalFileResource("https", "static.app.local", @"C:\Users\ASUS\source\repos\LibMang\Libman");
+            //app.UseLocalFileResource("https", "static.app.local", @"E:\Project\Work\SimpleGameLibraryManager\Libman");
         
 #endif
 
@@ -33,7 +35,6 @@ class Program
             // 注册数据资源控制器，它能处理前端的http请求并返回相应结果。DataServiceResource会自动扫描并注册程序集内的数据服务，您也可以手动指定数据服务所在的位置。
             app.UseDataServiceResource("https", "api.app.local");
 
-            app.RegisterJavaScriptWindowBinding(() => new CSObj());
 
             // 指定启动窗体
             app.UseMainWindow(context => new MainWindow());

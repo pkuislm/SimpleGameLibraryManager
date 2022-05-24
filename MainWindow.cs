@@ -1,5 +1,9 @@
 using NetDimension.NanUI;
 using NetDimension.NanUI.HostWindow;
+using NetDimension.NanUI.JavaScript;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 class MainWindow : Formium
 {
@@ -23,6 +27,23 @@ class MainWindow : Formium
         // 在此处进行浏览器相关操作
 
         ShowDevTools();
+        var obj = new JavaScriptObject();
+        
+        obj.Add("SelectGamePath", (args =>
+        {
+            string filePath = "";
+            InvokeIfRequired(() =>
+            {
+                FolderBrowserDialog folder = new FolderBrowserDialog();
+                folder.Description = "选择一个目录";
+                if (folder.ShowDialog() == DialogResult.OK)
+                {
+                    filePath = folder.SelectedPath;
+                }
+            });
+            return new JavaScriptValue(filePath);
+        }));
+        RegisterJavaScriptObject("natives", obj);
         //ExecuteJavaScript("alert('Hello NanUI')");
     }
 }

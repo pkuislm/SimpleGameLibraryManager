@@ -60,32 +60,7 @@ namespace SimpleGameLibraryManager
             }
                 
         }
-        [RoutePost("SetGameDir")]
-        public ResourceResponse GetGDir(ResourceRequest request)
-        {
-            FolderBrowserDialog folder = new FolderBrowserDialog();
-            folder.Description = "选择所有文件存放目录";
-            folder.ShowDialog();
-            var importpath = "";
-            Task.Run(() =>
-            {
-                
-                if (folder.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    string sPath = folder.SelectedPath;
-                }
-
-            }).GetAwaiter().GetResult();
-            
-            if (importpath != null) 
-            { 
-                return Json(new { success = true, path=importpath });
-            }
-            else
-            {
-                return Json(new { success = false });
-            }
-        }
+       
     }
 
 
