@@ -1,17 +1,43 @@
-function getGameIds(){
+function getRecGameIDs(){
+	return $.post(api_root + "GameContent/GetLast", {}, function(data){
+		return data;
+	});
+}
+
+function loadAllGames(){
 	$.post(api_root + "GameContent/GetContents", {}, function(data){
-		console.log(data);
+		if(data.success == true){
+			if(data.List.length>0){
+				var noc = document.getElementById("all_nocontent");
+				noc.parentNode.removeChild(noc);
+				for(x in data.List){
+					getGameDetails(btoa(data.List[x]))
+					//console.log();
+				}
+			}
+		}
 	});
 }
 	
 function getGameDetails(gid){
-	$.post(api_root + "GameContent/GetDetails", gid, function(data){
-		console.log(data);
+	var req = atob(gid);
+	$.post(api_root + "GameContent/GetDetails", req, function(data){
+		if(data.success == true){
+			addGameItem(gid, data.Game, "all");
+		}else{
+			console.log(data.reason);
+		}
+		
 	});
 }
 
 function addGameToLibrary(path){
-	$.post(api_root + "GameContent/AddSingleGame", path);
+	$.post(api_root + "GameContent/AddSingleGame", path, function(data){
+		if(data.success == false){
+			console.log(data.reason);
+		}
+	});
+	window.location.reload();
 }
 
 function removeGameItem(gid, type){
@@ -27,16 +53,50 @@ function removeGameItem(gid, type){
 	return false;
 }
 
-function addGameItem(gid, type){
-	var gtitle = "GameTitle";
-	var image = "./assets/entry/cover/7023a142952ced7e0b125b8fc14240c0.jpg";
+function selectPath(){
+	var inputObj=document.createElement('input')
+	inputObj.setAttribute('id','file');
+	inputObj.setAttribute('type','file');
+	inputObj.setAttribute('name','file');
+	inputObj.setAttribute("style",'visibility:hidden');
+	document.body.appendChild(inputObj);
+	inputObj.value;
+	inputObj.click();
+	console.log(inputObj);
+}
+
+$("#addG").on('click',function(){
+	selectPath();
+	document.querySelector('#file').addEventListener('change', e => {
+		if ('files' in e)
+			var file = e.files[0];
+		else
+			var file = e.value;
+		console.log(e);
+	});
+});
+ $("#fileImport").on('click',function(){
+	//文件上传事件
+});
+
+function addGameItem(gid, game, type){
+	//console.log(game);
+	/* console.log(game);
+	console.log(game.m_size);
+	console.log(game.m_size/1024/1024/1024); */
+	var gtitle = game.m_name;
+	var image = encodeURI("./assets/entry/byname/" + game.m_name + ".jpg");
 	var entrylink = "ent";
-	var reldate = "1970-1-1";
-	var brand = "GB";
-	var gsize = "0";
+	var reldate = game.m_reldate == null ? "未知" : game.m_reldate;
+	var brand = game.m_brand == null ? "未知" : game.m_brand;
+	var gsize = (game.m_size/1024/1024/1024).toFixed(2) + "GB";
 	var glang = "ZH";
-	var lastplay = "1970-1-1";
-	var totalplay = "0M";
+	var lastplay = game.m_lastOpenedTime == null ? "--" : game.m_lastOpenedTime;
+	var totalplay = game.m_time == null ? "未知" : game.m_time + "分钟";
+	
+	/* if(document.getElementById(gid) != null){
+		return;
+	} */
 	
 	if(type ==="recent"){
 		var dest = document.getElementById('subjects_list_recent');
@@ -68,3 +128,4 @@ function addGameItem(gid, type){
 	dest.appendChild(base);
 	return true;
 }
+

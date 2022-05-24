@@ -10,6 +10,7 @@
   <ItemGroup>
     <PackageReference Include="NetDimension.NanUI" Version="0.9.90.130" />
     <PackageReference Include="NetDimension.NanUI.Runtime" Version="90.6.7.1" />
+    <PackageReference Include="WindowsAPICodePack-Shell" Version="1.1.1" />
   </ItemGroup>
 
 </Project>

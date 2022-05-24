@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,7 +10,10 @@ namespace SimpleGameLibraryManager
 {
     public class BackGrounds
     {
+
         static public Dictionary<int, GameInfo> lib = new Dictionary<int, GameInfo>();
+
+        static public Dictionary<int, GameInfo> lib_recent = new Dictionary<int, GameInfo> ();
         public static uint MurmurHash2(byte[] data) => MurmurHash2(data, 0);
 
         public static uint MurmurHash2(byte[] data, uint seed)
@@ -57,8 +61,9 @@ namespace SimpleGameLibraryManager
 
             return h;
         }
+
     }
-    
+
 
     public class GameInfo
     {
@@ -68,9 +73,11 @@ namespace SimpleGameLibraryManager
         public string? m_description { get; set; }
         public long m_size { get; set; }
         public string m_path { get; set; }
+        public long? m_reldate { get; set; }
         public long? m_time { get; set; }
         public long? m_lastOpenedTime { get; set; }
         public string? m_execPath { get; set; }
+        public string? m_cover { get; set; }
 
         public GameInfo(string path)
         {

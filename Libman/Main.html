@@ -110,8 +110,7 @@
 				<div class="box-title">
 					<h3 class="title">全部游戏</h3>
 					<span class="pull-right">
-						<a href="javascript:none(0)" class="btn btn-sm btn-default">查看更多<i class="fa fa-fw fa-angle-double-right"></i></a>
-						
+						<a class="btn btn-sm btn-default" id="addG">添加<i class="fa fa-fw fa-angle-double-right"></i></a>
 					</span>
 				</div>
 				
@@ -183,7 +182,7 @@
 
 
 	$(document).ready(function() {
-		
+		loadAllGames();
 		var $tags_container = $('.tags-container');
 		$('.tags-container .tag-more').click(function() {
 			$(this).parent().toggleClass('open');
