@@ -11,8 +11,11 @@ class MainWindow : Formium
     public MainWindow()
     {
         // 在此处设置窗口样式
+       
         Size = new System.Drawing.Size(1280, 720);
         EnableSplashScreen = false;
+        Title = "SimpleGameLibraryManager";
+        Icon = new System.Drawing.Icon(@"..\..\..\Libman\ico\gal.ico");
     }
 
     protected override void OnReady()

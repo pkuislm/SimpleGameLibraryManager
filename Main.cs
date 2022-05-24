@@ -24,8 +24,8 @@ class Program
 #if RELEASE
             app.UseLocalFileResource("https", "static.app.local", System.IO.Path.Combine(System.Windows.Forms.Application.StartupPath, "Libman"));
 #else
-            //app.UseLocalFileResource("https", "static.app.local", @"E:\Visual Studio Project\BigWorks\SimpleGameLibraryManager\Libman");
-            app.UseLocalFileResource("https", "static.app.local", @"C:\Users\ASUS\source\repos\LibMang\Libman");
+            //app.UseLocalFileResource("https", "static.app.local", @"C:\Users\ASUS\source\repos\LibMang\Libman");
+            app.UseLocalFileResource("https", "static.app.local", @"E:\Project\Work\SimpleGameLibraryManager\Libman");
         
 #endif
 
