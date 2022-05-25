@@ -1,6 +1,7 @@
 using NetDimension.NanUI;
 using NetDimension.NanUI.HostWindow;
 using NetDimension.NanUI.JavaScript;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -42,6 +43,27 @@ class MainWindow : Formium
                 }
             });
             return new JavaScriptValue(filePath);
+        }));
+        obj.Add("OpenGame", (args =>
+        {
+            var gid = args.FirstOrDefault(x => x.IsString)?.GetString() ?? "";
+            int key;
+            if (!int.TryParse(gid, out key))
+            {
+                return new JavaScriptValue("游戏ID不正确");
+            }
+            if (SimpleGameLibraryManager.BackGrounds.lib.ContainsKey(key))
+            {
+                var path = SimpleGameLibraryManager.BackGrounds.lib[key].m_execPath;
+                SimpleGameLibraryManager.BackGrounds.lib_recent.Add(key, SimpleGameLibraryManager.BackGrounds.lib[key]);
+                InvokeIfRequired(() =>
+                {
+                    Process.Start(path);
+                });
+
+            }
+            
+            return new JavaScriptValue(0);
         }));
         RegisterJavaScriptObject("natives", obj);
         //ExecuteJavaScript("alert('Hello NanUI')");

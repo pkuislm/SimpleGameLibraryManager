@@ -4534,9 +4534,8 @@ ul.taglist {
     position: relative;
 }
 .cover-box .cover-thumb {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    min-width: 260px;
     min-height: 260px;
     max-height: 380px;
 }
@@ -6131,4 +6130,247 @@ img.zoom-img {
     animation: rounds 0.6s;
     pointer-events: none;
 }
-
+.ModalButtonGroup--vertical {
+    margin-top:40px;
+    margin-bottom:16px
+}
+.ModalButtonGroup--vertical .Button {
+    display:block;
+    width:220px;
+    margin-right:auto;
+    margin-left:auto
+}
+.ModalButtonGroup--vertical .Button+.Button {
+    margin-top:28px
+}
+.Modal-content--buttonGroupOnly .ModalButtonGroup--vertical {
+    margin-top:60px
+}
+.ModalButtonGroup--horizontal {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:row;
+    flex-direction:row;
+    margin-top:48px
+}
+.ModalButtonGroup--horizontal .Button {
+    -webkit-box-flex:1;
+    -ms-flex:1 1;
+    flex:1 1
+}
+.ModalButtonGroup--horizontal .Button:last-child:first-child {
+    width:220px;
+    margin-right:auto;
+    margin-left:auto;
+    -webkit-box-flex:initial;
+    -ms-flex:initial;
+    flex:initial
+}
+.ModalButtonGroup--horizontal .Button+.Button {
+    margin-left:16px
+}
+.Modal-wrapper {
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:203;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    overflow-x:hidden;
+    overflow-y:auto;
+    -webkit-transition:opacity .3s ease-out;
+    transition:opacity .3s ease-out
+}
+.Modal-wrapper.Modal-enter {
+    opacity:.01
+}
+.Modal-wrapper.Modal-enter-active,.Modal-wrapper.Modal-leave {
+    opacity:1
+}
+.Modal-wrapper.Modal-leave-active {
+    opacity:.01
+}
+.Modal-backdrop {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:0;
+    background-color:rgba(18,18,18,.65);
+    -webkit-transition:background-color .3s ease-out;
+    transition:background-color .3s ease-out
+}
+html[data-theme=dark] .Modal-backdrop {
+    background-color:rgba(0,0,0,.65)
+}
+.Modal-wrapper--transparent .Modal-backdrop {
+    background-color:transparent
+}
+.Modal {
+    position:relative;
+    z-index:1;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    width:1000px;
+    max-height:calc(100vh - 48px);
+    margin-right:auto;
+    margin-left:auto;
+    -webkit-box-shadow:0 5px 20px rgba(18,18,18,.1);
+    box-shadow:0 5px 20px rgba(18,18,18,.1);
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    -webkit-transition:max-height .8s ease;
+    transition:max-height .8s ease
+}
+html[data-theme=dark] .Modal {
+    -webkit-box-shadow:0 1px 3px rgba(0,0,0,.3);
+    box-shadow:0 1px 3px rgba(0,0,0,.3)
+}
+.Modal:focus {
+    outline:none
+}
+.Modal--large {
+    width:536px
+}
+.Modal--fullPage {
+    width:688px;
+    height:calc(100vh - 48px)
+}
+.Modal-enter .Modal {
+    -webkit-transform:translateY(20px);
+    transform:translateY(20px)
+}
+.Modal-enter-active .Modal {
+    -webkit-transition:opacity .3s ease-out,-webkit-transform .3s ease-out;
+    transition:opacity .3s ease-out,-webkit-transform .3s ease-out;
+    transition:transform .3s ease-out,opacity .3s ease-out;
+    transition:transform .3s ease-out,opacity .3s ease-out,-webkit-transform .3s ease-out
+}
+.Modal-enter-active .Modal,.Modal-leave .Modal {
+    -webkit-transform:translateY(0);
+    transform:translateY(0)
+}
+.Modal-leave-active .Modal {
+    -webkit-transform:translateY(20px);
+    transform:translateY(20px);
+    -webkit-transition:opacity .3s ease-out,-webkit-transform .3s ease-out;
+    transition:opacity .3s ease-out,-webkit-transform .3s ease-out;
+    transition:transform .3s ease-out,opacity .3s ease-out;
+    transition:transform .3s ease-out,opacity .3s ease-out,-webkit-transform .3s ease-out
+}
+.Modal-inner {
+    overflow:auto;
+    background:#fff;
+    border-radius:2px
+}
+html[data-theme=dark] .Modal-inner {
+    background:#121212
+}
+.Modal--fullPage .Modal-inner {
+    height:100%
+}
+.Modal-closeButton {
+    position:absolute;
+    top:8px;
+    right:-60px;
+    padding:12px
+}
+.Modal-closeIcon {
+    vertical-align:top;
+    fill:#fff
+}
+html[data-theme=dark] .Modal-closeIcon {
+    fill:#fff
+}
+.Modal-title {
+    margin-top:40px;
+    font-size:24px;
+    font-weight:500;
+    color:#121212;
+    text-align:center
+}
+html[data-theme=dark] .Modal-title {
+    color:#fff
+}
+.Modal-title.Modal-title--simple {
+    font-family:inherit;
+    font-size:20px
+}
+.Modal-subtitle {
+    padding:0 38px;
+    margin-top:4px;
+    font-size:14px;
+    line-height:1.5;
+    color:#8590a6;
+    text-align:center
+}
+html[data-theme=dark] .Modal-subtitle {
+    color:#8590a6
+}
+.Modal-subtitle a {
+    text-decoration:underline
+}
+.Modal-content {
+    -webkit-box-flex:1;
+    -ms-flex:1 1;
+    flex:1 1;
+    padding:0 24px 32px;
+    margin-top:24px;
+    line-height:1.7;
+    opacity:1
+}
+.Modal--fullPage .Modal-content {
+    padding:0
+}
+.Modal-content.Modal-content--spread {
+    height:100%;
+    margin-top:0
+}
+.Modal-content.Modal-content--hidden {
+    opacity:0;
+    -webkit-transition:opacity .3s ease-out;
+    transition:opacity .3s ease-out
+}
+.Modal-footer {
+    padding:16px 24px;
+    font-size:13px;
+    line-height:1.7;
+    color:#8590a6;
+    background:#f6f6f6;
+    border-top:1px solid #ebebeb
+}
+html[data-theme=dark] .Modal-footer {
+    color:#8590a6;
+    background:#1b1b1b;
+    border-top:1px solid #2e2e2e
+}
+.Modal-footer a {
+    text-decoration:underline
+}
+.Button--plain {
+    height:auto;
+    padding:0;
+    line-height:inherit;
+    background-color:transparent;
+    border:none;
+    border-radius:0
+}

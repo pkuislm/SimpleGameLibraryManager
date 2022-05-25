@@ -107,6 +107,15 @@ namespace SimpleGameLibraryManager
             {
                 m_execPath = "";
             }
+            files = Directory.GetFiles(m_path, "cover.jpg", SearchOption.TopDirectoryOnly);
+            if (files.Length != 0)
+            {
+                File.Copy(files[0], @"C:\Users\ASUS\source\repos\LibMang\Libman\assets\entry\byname\" + m_name + ".jpg", true);
+            }
+            else
+            {
+                File.Copy(@"C:\Users\ASUS\source\repos\LibMang\Libman\assets\entry\noimage.jpg", @"C:\Users\ASUS\source\repos\LibMang\Libman\assets\entry\byname\" + m_name + ".jpg", true);
+            }
             return 0;
         }
 

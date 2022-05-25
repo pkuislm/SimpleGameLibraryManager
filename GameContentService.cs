@@ -22,7 +22,7 @@ namespace SimpleGameLibraryManager
         public ResourceResponse GetLIds(ResourceRequest request)
         {
             // 返回json
-            List<int> list = new List<int>(BackGrounds.lib.Keys);
+            List<int> list = new List<int>(BackGrounds.lib_recent.Keys);
             return Json(new { success = true, List = list });
         }
 

@@ -383,7 +383,7 @@ a:active {
     max-height: none;
 }
 .entry-box-header .cover-box .cover-inner {
-    max-height: 350px;
+    max-height: 300px;
 }
 }
 @media (max-width: 767px) {
@@ -977,7 +977,7 @@ a:active {
     position: sticky;
 }
 .sticky-top {
-    top: 64px;
+    top: 24px;
 }
 @media (max-width: 767px) {
 .sticky {
