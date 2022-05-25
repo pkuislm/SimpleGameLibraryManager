@@ -27,7 +27,7 @@ class MainWindow : Formium
     {
         // 在此处进行浏览器相关操作
 
-        ShowDevTools();
+        //ShowDevTools();
         var obj = new JavaScriptObject();
         
         obj.Add("SelectGamePath", (args =>
