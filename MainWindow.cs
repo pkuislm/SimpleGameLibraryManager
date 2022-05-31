@@ -1,10 +1,12 @@
 using NetDimension.NanUI;
 using NetDimension.NanUI.HostWindow;
 using NetDimension.NanUI.JavaScript;
+using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SimpleGameLibraryManager;
 
 class MainWindow : Formium
 {
@@ -20,7 +22,7 @@ class MainWindow : Formium
         Size = new System.Drawing.Size(1280, 720);
         EnableSplashScreen = false;
         Title = "SimpleGameLibraryManager";
-        Icon = new System.Drawing.Icon(@"..\..\..\Libman\ico\gal.ico");
+        Icon = new System.Drawing.Icon(@"C:\Users\ASUS\source\repos\LibMang\Libman\ico\gal.ico");
     }
 
     protected override void OnReady()
@@ -41,6 +43,10 @@ class MainWindow : Formium
                 {
                     filePath = folder.SelectedPath;
                 }
+                else
+                {
+                    filePath = "None";
+                }
             });
             return new JavaScriptValue(filePath);
         }));
@@ -52,17 +58,42 @@ class MainWindow : Formium
             {
                 return new JavaScriptValue("游戏ID不正确");
             }
-            if (SimpleGameLibraryManager.BackGrounds.lib.ContainsKey(key))
+            Task task1 = new Task(() =>
             {
-                var path = SimpleGameLibraryManager.BackGrounds.lib[key].m_execPath;
-                SimpleGameLibraryManager.BackGrounds.lib_recent.Add(key, SimpleGameLibraryManager.BackGrounds.lib[key]);
-                InvokeIfRequired(() =>
+                if (BackGrounds.lib.ContainsKey(key))
                 {
-                    Process.Start(path);
-                });
+                    var path = BackGrounds.lib[key].m_execPath;
+                    BackGrounds.lib[key].m_lastOpenedTime = DateTime.Now.ToString();
+                    if (!BackGrounds.lib_recent.ContainsKey(key))
+                    {
+                        BackGrounds.lib_recent.Add(key, BackGrounds.lib[key]);
+                    }
+/*                    InvokeIfRequired(() =>
+                    {*/
+                    var StartTime = DateTime.Now;
+                    var curRuntime = 0;
+                    Process gp = new Process();
+                    gp.StartInfo.FileName = path;
+                    gp.Start();
+                    BackGrounds.lib[key].m_isOnline = true;
+                    ExecuteJavaScript("window.location.reload()");
+                    do
+                    {
+                        if (!gp.HasExited)
+                        {
+                            curRuntime = (DateTime.Now - StartTime).Minutes;
+                        }
+                    }
+                    while (!gp.WaitForExit(60000));
+                    BackGrounds.lib[key].m_time = BackGrounds.lib[key].m_time.HasValue ? BackGrounds.lib[key].m_time + curRuntime : curRuntime;
+                    BackGrounds.lib[key].m_isOnline = false;
+                    ExecuteJavaScript("window.location.reload()");
 
-            }
-            
+                    //});
+
+                }       
+            });
+            task1.Start();
             return new JavaScriptValue(0);
         }));
         RegisterJavaScriptObject("natives", obj);

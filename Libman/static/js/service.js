@@ -90,14 +90,15 @@ function addGameItem(gid, game, type){
 	var glang = "ZH";
 	var lastplay = game.m_lastOpenedTime == null ? "--" : game.m_lastOpenedTime;
 	var totalplay = game.m_time == null ? "未知" : game.m_time + "分钟";
-	
+	//console.log(game.m_isOnline);
+	var isRunning = game.m_isOnline == false ? "display:none" : ""
 	/* if(document.getElementById(gid) != null){
 		return;
 	} */
-	
+	var idgid = gid;
 	if(type ==="recent"){
 		var dest = document.getElementById('subjects_list_recent');
-		gid += "_rec";
+		idgid += "_rec";
 	}else{
 		var dest = document.getElementById('subjects_list_all');
 	}
@@ -105,14 +106,14 @@ function addGameItem(gid, game, type){
 	
 	var base = document.createElement("div");
 	base.setAttribute("class", "col-xs-12 col-sm-6 transition");
-	base.setAttribute("id", gid);
+	base.setAttribute("id", idgid);
 	
 	var sec = document.createElement("section")
 	sec.setAttribute("class", "media mediabox mb15");
 	
 	//填充上半部分（图片）
-	var cont1 = "<a class=\"media-left\" onclick=\"openGameDetailPage(\'{ggid}\')\"><div class=\"media-coverbox thumb-container bg-cover pb1x2\" style=\"background-image:url({bg}); width:120px;\"><span class=\"mask\"><span class=\"abs bottom caption\">{title}</span></span></div></a>";
-	sec.innerHTML = cont1.format({ggid:gid, bg:image, title:gtitle});
+	var cont1 = "<a class=\"media-left\" onclick=\"openGameDetailPage(\'{ggid}\')\"><div class=\"media-coverbox thumb-container bg-cover pb1x2\" style=\"background-image:url({bg}); width:120px;\"><span class=\"mask\"><span class=\"abs bottom caption\">{title}</span></span><span class=\"htag\" style=\"{isrun}\">运行中</span></div></a>";
+	sec.innerHTML = cont1.format({ggid:gid, bg:image, title:gtitle, isrun:isRunning});
 	
 	//填充下半部分（信息）
 	var div2 = document.createElement("div");
@@ -193,6 +194,9 @@ function openGameDetailPage(gid){
 														</a>\
 														<a class=\"we-btn btn-color we-bigger vab\">\
 															<span>游戏画廊</span>\
+														</a>\
+														<a onclick=\"doDelete(this);\" data-id=\"0\" class=\"we-btn btn-primary we-bigger mr5\">\
+															<span>删除游戏</span>\
 														</a>\
 													</div>\
 													\
@@ -293,6 +297,17 @@ function doStart(game){
 	var id = atob($(game).attr("data-id"));
 	console.log(id);
 	Formium.external.natives.OpenGame(id);
+}
+
+function doDelete(game){
+	var id = atob($(game).attr("data-id"));
+	$.post(api_root + "GameContent/RemoveSingleGame", id, function(data){
+		if(data.success != true){
+			alert(data.reason);
+		}else{
+			window.location.reload();
+		}
+	});
 }
 
 function getParenthesesStr(text) {

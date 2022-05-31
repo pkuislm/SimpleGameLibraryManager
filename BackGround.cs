@@ -75,15 +75,16 @@ namespace SimpleGameLibraryManager
         public string m_path { get; set; }
         public long? m_reldate { get; set; }
         public long? m_time { get; set; }
-        public long? m_lastOpenedTime { get; set; }
+        public string? m_lastOpenedTime { get; set; }
         public string? m_execPath { get; set; }
         public string? m_cover { get; set; }
-
+        public bool m_isOnline { get; set;}
         public GameInfo(string path)
         {
             m_name = "";
             m_path = path;
             m_size = 0;
+            m_isOnline = false;
             ScanDir();
         }
         public int ScanDir()
