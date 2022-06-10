@@ -22,7 +22,12 @@ class MainWindow : Formium
         Size = new System.Drawing.Size(1280, 720);
         EnableSplashScreen = false;
         Title = "SimpleGameLibraryManager";
-        Icon = new System.Drawing.Icon(@"C:\Users\ASUS\source\repos\LibMang\Libman\ico\gal.ico");
+#if RELEASE
+        Icon = new System.Drawing.Icon(@".\Libman\ico\gal.ico");
+#else
+        Icon = new System.Drawing.Icon(@"C:\Users\ASUS\source\repos\LibMang\Libman\ico\gal.ico");    
+#endif
+
     }
 
     protected override void OnReady()
@@ -74,6 +79,7 @@ class MainWindow : Formium
                     var curRuntime = 0;
                     Process gp = new Process();
                     gp.StartInfo.FileName = path;
+                    gp.StartInfo.WorkingDirectory = BackGrounds.lib[key].m_path;
                     gp.Start();
                     BackGrounds.lib[key].m_isOnline = true;
                     ExecuteJavaScript("window.location.reload()");
